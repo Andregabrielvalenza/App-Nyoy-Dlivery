@@ -1,0 +1,70 @@
+<ion-content style="position: relative;">
+  <ion-card class="ion-no-margin card_menu">
+    <div style="width: 100%;">
+      <ion-button class="btn_menu">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+      <ion-button class="btn_menu_izquierdo" (click)="open_menu ()">
+        <ion-icon name="menu-outline"></ion-icon>
+      </ion-button>
+    </div>
+    <h1 class="ion-text-center">Mi carrito de compras</h1>
+  </ion-card>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="11" size-sm="8" size-md="5">
+        <ion-card class="ion-no-margin card_frutas">
+            <img src="assets/img/broccoli.png">
+          <p class="p_font">Brocoli</p>
+        </ion-card>
+      </ion-col>
+      <ion-col size="11" size-sm="8" size-md="5">
+        <ion-card class="ion-no-margin card_frutas">
+            <img src="assets/img/kale.png">
+          <p class="p_font">Lechuga</p>
+          <div class="div_flex_precio">
+            <p class="p_number_g">300g</p>
+            <p class="p_soles">S/. 1.20</p>
+          </div>
+        </ion-card>
+      </ion-col>
+      <ion-col size="11" size-sm="8" size-md="5">
+        <ion-card class="ion-no-margin card_frutas">
+            <img src="assets/img/pepper.png">
+          <p class="p_font">Pimentón rojo</p>
+          <div class="div_flex_precio">
+            <p class="p_number_g">5</p>
+            <p class="p_soles">S/. 11.13</p>
+          </div>
+        </ion-card>
+      </ion-col>
+      <ion-col size="11" size-sm="8" size-md="5">
+        <ion-card class="ion-no-margin card_frutas">
+            <img src="assets/img/strawberry.png">
+          <p class="p_font">Fresa</p>
+          <div class="div_flex_precio">
+            <p class="p_number_g">1 kg.</p>
+            <p class="p_soles">S/. 19.00</p>
+          </div>
+        </ion-card>
+      </ion-col>
+      <ion-col size="11" size-sm="8" size-md="7" class="ion_margin_top">
+        <ion-row class="ion-justify-content-center">
+          <ion-col size="6" size-sm="4" size-xl="2">
+            <p class="p_margin_top">Sub-total</p>
+            <p class="p_margin_top">Delivery</p>
+            <p class="p_margin_top p_font_we">Total</p>
+          </ion-col>
+          <ion-col size="6" class="ion-text-end" size-sm="4" size-xl="2">
+            <p class="p_margin_top">S/. 72.00</p>
+            <p class="p_margin_top">Standard (free)</p>
+            <p class="p_margin_top p_font_we">S/. 72.00</p>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col size="10" size-sm="7" size-md="7" size-lg="6" class="ion-margin-top">
+        <ion-button class="btn_listo">Adelante</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,687 @@
+<ion-content>
+  <div style="background: #ffffff; width: 100%;">
+    <ion-button class="btn_menu">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+    <ion-button class="btn_menu_izquierdo" (click)="open_menu ()">
+      <ion-icon name="menu-outline"></ion-icon>
+    </ion-button>
+  </div>
+  <ion-grid class="ion-no-padding" style="background-color: rgba(255, 255, 255, 0.3);">
+    <ion-row style="background: #ffffff;">
+      <ion-col size="12" class="ion-margin-bottom col_slider">
+        <ion-row>
+          <ion-col size="2" class="ion-text-center">
+            <span class="slider-nav arrow-prev" (click)="slidePrev(sliderTwo,slideWithNav2)">
+              <ion-icon name="chevron-back-outline" class="flecha_slider" [class.disabled]="sliderTwo.isBeginningSlide"></ion-icon>
+            </span>
+          </ion-col>
+          <ion-col size="8">
+    
+            <ion-slides pager="false" [options]="slideOptsTwo" #slideWithNav2>
+              <ion-slide class="slider">
+                <img src="assets/img/slider1.png">
+              </ion-slide>
+              <ion-slide class="slider">
+                <img src="assets/img/Logocandelaria.png">
+              </ion-slide>
+              <ion-slide class="slider">
+                <img src="assets/img/slider3.png">
+              </ion-slide>
+            </ion-slides>
+          </ion-col>
+          <ion-col size="2" class="ion-text-center">
+            <span class="slider-nav arrow-next" (click)="slideNext(sliderTwo,slideWithNav2)">
+              <ion-icon name="chevron-forward-outline" class="flecha_slider" [class.disabled]="sliderTwo.isEndSlide"></ion-icon>
+            </span>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col size="12" class="ion-no-padding" class="mamachela">
+        <ion-slides pager="false" [options]="slideOptsOne" class="slider_mamachela">
+          <ion-slide>
+            <p>Promo del dia</p>
+          </ion-slide>
+          <ion-slide>
+            <div class="linea_blanco"></div>
+            <p class="p_active_slider">Menú del Dia</p>
+            <div class="div_triangulo"></div>
+          </ion-slide>
+          <ion-slide>
+            <p>Menú light</p>
+          </ion-slide>
+          <ion-slide>
+            <p>Comida</p>
+          </ion-slide>
+          <ion-slide>
+            <p>Entradas</p>
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+      <ion-col size="12" class="ion-no-padding" class="candelaria">
+        <ion-slides pager="false" [options]="slideOptsOne" class="slider_candelaria">
+          <ion-slide>
+            <p>Promo del dia</p>
+          </ion-slide>
+          <ion-slide>
+            <div class="linea_blanco"></div>
+            <p class="p_active_slider">Menú del Dia</p>
+            <div class="div_triangulo"></div>
+          </ion-slide>
+          <ion-slide>
+            <p>Menú light</p>
+          </ion-slide>
+          <ion-slide>
+            <p>Comida</p>
+          </ion-slide>
+          <ion-slide>
+            <p>Entradas</p>
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+      <ion-col size="12" class="ion-no-padding" class="donas">
+        <ion-slides pager="false" [options]="slideOptsOne" class="slider_dona">
+          <ion-slide>
+            <p>Promo del dia</p>
+          </ion-slide>
+          <ion-slide>
+            <div class="linea_blanco"></div>
+            <p class="p_active_slider">Menú del Dia</p>
+            <div class="div_triangulo"></div>
+          </ion-slide>
+          <ion-slide>
+            <p>Menú light</p>
+          </ion-slide>
+          <ion-slide>
+            <p>Comida</p>
+          </ion-slide>
+          <ion-slide>
+            <p>Entradas</p>
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12">
+        <ion-thumbnail class="img_img">
+          <img src="assets/img/8f003918e9ee1ed3485149c7b6daf73a.png">
+        </ion-thumbnail>
+      </ion-col>
+      <ion-col size="10" size-sm="7" size-md="6">
+        <ion-card class="card_tarifario">
+          <ion-card-header>
+            <ion-card-title>Tarifario</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="12">
+                <ion-row>
+                  <ion-col size="10">
+                    <p class="titulo_black">Menu completo</p>
+                    <p class="titulo_book">(1 entrada, 1 segundo, 1 bebida y 1 postre)</p>
+                  </ion-col>
+                  <ion-col size="2" class="ion-text-sm-end">
+                    <p class="titulo_book bajar_p_precio">(S/.13.00)</p>
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+              <ion-col size="12" class="col_bajar_entradas">
+                <p class="titulo_black">Quiero solo…</p>
+                <ion-row>
+                  <ion-col size="7" size-sm="5">
+                    <ion-row>
+                      <ion-col size="6">
+                        <p class="titulo_black">Segundos</p>
+                        <p class="titulo_black">Postre</p>
+                      </ion-col>
+                      <ion-col size="6">
+                        <p class="titulo_book">(S/.5.00)</p>
+                        <p class="titulo_book">(S/.3.00)</p>
+                      </ion-col>
+                    </ion-row>
+                  </ion-col>
+                  <ion-col size="5" size-sm="4" offset-sm="3">
+                    <ion-row>
+                      <ion-col size="6" class="ion-text-end">
+                        <p class="titulo_black">Entrada</p>
+                        <p class="titulo_black">Bebida</p>
+                      </ion-col>
+                      <ion-col size="6" class="ion-text-end">
+                        <p class="titulo_book">(S/.5.00)</p>
+                        <p class="titulo_book">(S/.3.00)</p>
+                      </ion-col>
+                    </ion-row>
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="9" size-sm="7" class="ion-margin-bottom">
+        <h5>Segundos</h5>
+        <ion-row>
+          <ion-col size="9">
+            <ion-row>
+              <ion-col size="12">
+                <ion-item lines="none">
+                  <img src="assets/img/e00af2ba8b68026290a14017f53576cd.png">
+                  <ion-label>Chicharrón de cerdo</ion-label>
+                </ion-item>
+              </ion-col>
+              <ion-col size="12">
+                <ion-item lines="none">
+                  <img src="assets/img/e00af2ba8b68026290a14017f53576cd.png">
+                  <ion-label>Ali de gallina</ion-label>
+                </ion-item>
+              </ion-col>
+              <ion-col size="12">
+                <ion-item lines="none">
+                  <img src="assets/img/e00af2ba8b68026290a14017f53576cd.png">
+                  <ion-label>Rocoto relleno a Caserola<br> de la abuela (+S/.5.00)</ion-label>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col size="3">
+            <ion-col size="12">
+              <div class="div_sumar_resto">
+                <ion-button class="btn_restar">-</ion-button>
+                <p class="p_cantidad">1</p>
+                <ion-button class="btn_sumar">+</ion-button>
+              </div>
+            </ion-col>
+            <ion-col size="12">
+              <div class="div_sumar_resto">
+                <ion-button class="btn_restar">-</ion-button>
+                <p class="p_cantidad">1</p>
+                <ion-button class="btn_sumar">+</ion-button>
+              </div>
+            </ion-col>
+            <ion-col size="12">
+              <div class="div_sumar_resto">
+                <ion-button class="btn_restar">-</ion-button>
+                <p class="p_cantidad">1</p>
+                <ion-button class="btn_sumar">+</ion-button>
+              </div>
+            </ion-col>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col size="9" size-sm="7" class="ion-margin-bottom">
+        <h5>Entrada</h5>
+        <ion-row>
+          <ion-col size="9">
+            <ion-row>
+              <ion-col size="12">
+                <ion-item lines="none">
+                  <img src="assets/img/e00af2ba8b68026290a14017f53576cd.png">
+                  <ion-label>Sopa de pollo</ion-label>
+                </ion-item>
+              </ion-col>
+              <ion-col size="12">
+                <ion-item lines="none">
+                  <img src="assets/img/e00af2ba8b68026290a14017f53576cd.png">
+                  <ion-label>Ensalada</ion-label>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col size="3">
+            <ion-col size="12">
+              <div class="div_sumar_resto">
+                <ion-button class="btn_restar">-</ion-button>
+                <p class="p_cantidad">1</p>
+                <ion-button class="btn_sumar">+</ion-button>
+              </div>
+            </ion-col>
+            <ion-col size="12">
+              <div class="div_sumar_resto">
+                <ion-button class="btn_restar">-</ion-button>
+                <p class="p_cantidad">1</p>
+                <ion-button class="btn_sumar">+</ion-button>
+              </div>
+            </ion-col>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col size="9" size-sm="7" class="ion-margin-bottom">
+        <h5>Para tomar</h5>
+        <ion-row>
+          <ion-col size="9">
+            <ion-row>
+              <ion-col size="12">
+                <ion-item lines="none">
+                  <img src="assets/img/e00af2ba8b68026290a14017f53576cd.png">
+                  <ion-label>Maracuya</ion-label>
+                </ion-item>
+              </ion-col>
+              <ion-col size="12">
+                <ion-item lines="none">
+                  <img src="assets/img/e00af2ba8b68026290a14017f53576cd.png">
+                  <ion-label>Chicha morada</ion-label>
+                </ion-item>
+              </ion-col>
+              <ion-col size="12">
+                <ion-item lines="none">
+                  <img src="assets/img/e00af2ba8b68026290a14017f53576cd.png">
+                  <ion-label>Gaseosa (S/.2.00)</ion-label>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col size="3">
+            <ion-col size="12">
+              <div class="div_sumar_resto">
+                <ion-button class="btn_restar">-</ion-button>
+                <p class="p_cantidad">1</p>
+                <ion-button class="btn_sumar">+</ion-button>
+              </div>
+            </ion-col>
+            <ion-col size="12">
+              <div class="div_sumar_resto">
+                <ion-button class="btn_restar">-</ion-button>
+                <p class="p_cantidad">1</p>
+                <ion-button class="btn_sumar">+</ion-button>
+              </div>
+            </ion-col>
+            <ion-col size="12">
+              <div class="div_sumar_resto">
+                <ion-button class="btn_restar">-</ion-button>
+                <p class="p_cantidad">1</p>
+                <ion-button class="btn_sumar">+</ion-button>
+              </div>
+            </ion-col>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col size="9" size-sm="7" class="ion-margin-bottom">
+        <h5>Postre</h5>
+        <ion-row>
+          <ion-col size="9">
+            <ion-row>
+              <ion-col size="12">
+                <ion-item lines="none">
+                  <img src="assets/img/e00af2ba8b68026290a14017f53576cd.png">
+                  <ion-label>Tocino del cielo</ion-label>
+                </ion-item>
+              </ion-col>
+              <ion-col size="12">
+                <ion-item lines="none">
+                  <img src="assets/img/e00af2ba8b68026290a14017f53576cd.png">
+                  <ion-label>Torta</ion-label>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col size="3">
+            <ion-col size="12">
+              <div class="div_sumar_resto">
+                <ion-button class="btn_restar">-</ion-button>
+                <p class="p_cantidad">1</p>
+                <ion-button class="btn_sumar">+</ion-button>
+              </div>
+            </ion-col>
+            <ion-col size="12">
+              <div class="div_sumar_resto">
+                <ion-button class="btn_restar">-</ion-button>
+                <p class="p_cantidad">1</p>
+                <ion-button class="btn_sumar">+</ion-button>
+              </div>
+            </ion-col>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col size="10" size-sm="7" size-md="6">
+        <ion-card class="card_precio_verde">
+          <p><span class="span_total ion-margin-end">Total a pagar:</span><span class="span_precio">S/. 65.9</span></p>
+        </ion-card>
+      </ion-col>
+      <ion-col size="9" size-sm="7" class="ion-margin-bottom ion-margin-top">
+        <h5>Resumen de pedido</h5>
+        <ion-row class="ion-justify-content-center">
+          <ion-col size="11">
+            <ion-row class="ion-justify-content-center">
+              <ion-col size="6">
+                <ion-label class="label_resumen">Menu completo: 2</ion-label>
+              </ion-col>
+              <ion-col size="6"></ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col size="11">
+            <ion-row class="ion-justify-content-center">
+              <ion-col size="6">
+                <ion-label class="label_resumen">Entrada extra: 1</ion-label>
+              </ion-col>
+              <ion-col size="6">
+                <ion-label class="label_resumen">Bebida extra: 1</ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col size="11">
+            <ion-row class="ion-justify-content-center">
+              <ion-col size="6">
+                <ion-label class="label_resumen">Segundo extra: 1</ion-label>
+              </ion-col>
+              <ion-col size="6">
+                <ion-label class="label_resumen">Postre extra: 0</ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col size="9" size-sm="7">
+        <h5>¿Algún comentario?</h5>
+        <ion-textarea></ion-textarea>
+        <div class="div_btn_final">
+          <ion-button class="btn_anadir_pagar">Añadir mas</ion-button>
+          <ion-button class="btn_anadir_pagar">Pagar</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center" style="display: block;">
+      <ion-col size="12" size-sm="11" size-md="9" size-lg="11" size-xl="9" class="ion-margin-top menu_aldia_mamachola">
+        <ion-row class="ion-justify-content-center">
+          <ion-col size="12" size-sm="6" size-lg="4" class="padding_start_end">
+            <ion-card>
+              <ion-thumbnail>
+                <img src="assets/img/plato.png">
+              </ion-thumbnail>
+              <div class="div_padding_top">
+                <h5>Nogada de pollo</h5>
+                <p class="descripcion_card">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy ...</p>
+                <div>
+                  <div class="div_precio">
+                    <p class="p_precio">S/. 30.00</p>
+                  </div>
+                  <div class="div_botonos">
+                    <ion-button class="btn_menos">-</ion-button>
+                    <p class="p_catidad">1</p>
+                    <ion-button class="btn_mas">+</ion-button>
+                  </div>
+                </div>
+                <ion-button class="btn_close ion-no-padding ion-no-margin"><ion-icon name="heart-outline"></ion-icon></ion-button>
+              </div>
+            </ion-card>
+          </ion-col>
+          <ion-col size="12" size-sm="6" size-lg="4" class="padding_start_end">
+            <ion-card>
+              <ion-thumbnail>
+                <img src="assets/img/plato1.png">
+              </ion-thumbnail>
+              <div class="div_padding_top">
+                <h5>Chicharron de trucha</h5>
+                <p class="descripcion_card">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy ...</p>
+                <div>
+                  <div class="div_precio">
+                    <p class="p_precio">S/. 30.00</p>
+                  </div>
+                  <div class="div_botonos">
+                    <ion-button class="btn_menos">-</ion-button>
+                    <p class="p_catidad">1</p>
+                    <ion-button class="btn_mas">+</ion-button>
+                  </div>
+                </div>
+                <ion-button class="btn_close ion-no-padding ion-no-margin"><ion-icon name="heart-outline"></ion-icon></ion-button>
+              </div>
+            </ion-card>
+          </ion-col>
+          <ion-col size="12" size-sm="6" size-lg="4" class="padding_start_end">
+            <ion-card>
+              <ion-thumbnail>
+                <img src="assets/img/plato2.png">
+              </ion-thumbnail>
+              <div class="div_padding_top">
+                <h5>Bisteck a la olla</h5>
+                <p class="descripcion_card">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy ...</p>
+                <div>
+                  <div class="div_precio">
+                    <p class="p_precio">S/. 30.00</p>
+                  </div>
+                  <div class="div_botonos">
+                    <ion-button class="btn_menos">-</ion-button>
+                    <p class="p_catidad">1</p>
+                    <ion-button class="btn_mas">+</ion-button>
+                  </div>
+                </div>
+                <ion-button class="btn_close ion-no-padding ion-no-margin"><ion-icon name="heart-outline"></ion-icon></ion-button>
+              </div>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col size="12" size-sm="11" size-md="9" size-lg="11" size-xl="9" class="ion-margin-top comida_mamachola">
+        <ion-row class="ion-justify-content-center">
+          <ion-col size="12" size-sm="6" size-lg="4" class="padding_start_end">
+            <ion-card>
+              <ion-thumbnail>
+                <img src="assets/img/comida1.png">
+              </ion-thumbnail>
+              <div class="div_padding_top">
+                <h5>Nogada de pollo</h5>
+                <p class="descripcion_card">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy ...</p>
+                <div>
+                  <div class="div_precio">
+                    <p class="p_precio">S/. 30.00</p>
+                  </div>
+                  <div class="div_botonos">
+                    <ion-button class="btn_menos">-</ion-button>
+                    <p class="p_catidad">1</p>
+                    <ion-button class="btn_mas">+</ion-button>
+                  </div>
+                </div>
+                <ion-button class="btn_close ion-no-padding ion-no-margin"><ion-icon name="heart-outline"></ion-icon></ion-button>
+              </div>
+            </ion-card>
+          </ion-col>
+          <ion-col size="12" size-sm="6" size-lg="4" class="padding_start_end">
+            <ion-card>
+              <ion-thumbnail>
+                <img src="assets/img/comida2.png">
+              </ion-thumbnail>
+              <div class="div_padding_top">
+                <h5>Chicharron de trucha</h5>
+                <p class="descripcion_card">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy ...</p>
+                <div>
+                  <div class="div_precio">
+                    <p class="p_precio">S/. 30.00</p>
+                  </div>
+                  <div class="div_botonos">
+                    <ion-button class="btn_menos">-</ion-button>
+                    <p class="p_catidad">1</p>
+                    <ion-button class="btn_mas">+</ion-button>
+                  </div>
+                </div>
+                <ion-button class="btn_close ion-no-padding ion-no-margin"><ion-icon name="heart-outline"></ion-icon></ion-button>
+              </div>
+            </ion-card>
+          </ion-col>
+          <ion-col size="12" size-sm="6" size-lg="4" class="padding_start_end">
+            <ion-card>
+              <ion-thumbnail>
+                <img src="assets/img/comida3.png">
+              </ion-thumbnail>
+              <div class="div_padding_top">
+                <h5>Bisteck a la olla</h5>
+                <p class="descripcion_card">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy ...</p>
+                <div>
+                  <div class="div_precio">
+                    <p class="p_precio">S/. 30.00</p>
+                  </div>
+                  <div class="div_botonos">
+                    <ion-button class="btn_menos">-</ion-button>
+                    <p class="p_catidad">1</p>
+                    <ion-button class="btn_mas">+</ion-button>
+                  </div>
+                </div>
+                <ion-button class="btn_close ion-no-padding ion-no-margin"><ion-icon name="heart-outline"></ion-icon></ion-button>
+              </div>
+            </ion-card>
+          </ion-col>
+          <ion-col size="12" size-sm="6" size-lg="4" class="padding_start_end">
+            <ion-card>
+              <ion-thumbnail>
+                <img src="assets/img/comida4.png">
+              </ion-thumbnail>
+              <div class="div_padding_top">
+                <h5>Bisteck a la olla</h5>
+                <p class="descripcion_card">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy ...</p>
+                <div>
+                  <div class="div_precio">
+                    <p class="p_precio">S/. 30.00</p>
+                  </div>
+                  <div class="div_botonos">
+                    <ion-button class="btn_menos">-</ion-button>
+                    <p class="p_catidad">1</p>
+                    <ion-button class="btn_mas">+</ion-button>
+                  </div>
+                </div>
+                <ion-button class="btn_close ion-no-padding ion-no-margin"><ion-icon name="heart-outline"></ion-icon></ion-button>
+              </div>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col size="12" size-sm="11" size-md="9" size-lg="11" size-xl="9" class="ion-margin-top menu_aldia_donas">
+        <ion-row class="ion-justify-content-center">
+          <ion-col size="12" size-sm="6" size-lg="4" class="padding_start_end">
+            <ion-card>
+              <ion-thumbnail>
+                <img src="assets/img/plato.png">
+              </ion-thumbnail>
+              <div class="div_padding_top">
+                <h5>Nogada de pollo</h5>
+                <p class="descripcion_card">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy ...</p>
+                <div>
+                  <div class="div_precio">
+                    <p class="p_precio">S/. 30.00</p>
+                  </div>
+                  <div class="div_botonos">
+                    <ion-button class="btn_menos">-</ion-button>
+                    <p class="p_catidad">1</p>
+                    <ion-button class="btn_mas">+</ion-button>
+                  </div>
+                </div>
+                <ion-button class="btn_close ion-no-padding ion-no-margin"><ion-icon name="heart-outline"></ion-icon></ion-button>
+              </div>
+            </ion-card>
+          </ion-col>
+          <ion-col size="12" size-sm="6" size-lg="4" class="padding_start_end">
+            <ion-card>
+              <ion-thumbnail>
+                <img src="assets/img/plato1.png">
+              </ion-thumbnail>
+              <div class="div_padding_top">
+                <h5>Chicharron de trucha</h5>
+                <p class="descripcion_card">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy ...</p>
+                <div>
+                  <div class="div_precio">
+                    <p class="p_precio">S/. 30.00</p>
+                  </div>
+                  <div class="div_botonos">
+                    <ion-button class="btn_menos">-</ion-button>
+                    <p class="p_catidad">1</p>
+                    <ion-button class="btn_mas">+</ion-button>
+                  </div>
+                </div>
+                <ion-button class="btn_close ion-no-padding ion-no-margin"><ion-icon name="heart-outline"></ion-icon></ion-button>
+              </div>
+            </ion-card>
+          </ion-col>
+          <ion-col size="12" size-sm="6" size-lg="4" class="padding_start_end">
+            <ion-card>
+              <ion-thumbnail>
+                <img src="assets/img/plato2.png">
+              </ion-thumbnail>
+              <div class="div_padding_top">
+                <h5>Bisteck a la olla</h5>
+                <p class="descripcion_card">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy ...</p>
+                <div>
+                  <div class="div_precio">
+                    <p class="p_precio">S/. 30.00</p>
+                  </div>
+                  <div class="div_botonos">
+                    <ion-button class="btn_menos">-</ion-button>
+                    <p class="p_catidad">1</p>
+                    <ion-button class="btn_mas">+</ion-button>
+                  </div>
+                </div>
+                <ion-button class="btn_close ion-no-padding ion-no-margin"><ion-icon name="heart-outline"></ion-icon></ion-button>
+              </div>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col size="12" size-sm="11" size-md="9" size-lg="11" size-xl="9" class="ion-margin-top menu_aldia_candelaria">
+        <ion-row class="ion-justify-content-center">
+          <ion-col size="12" size-sm="6" size-lg="4" class="padding_start_end">
+            <ion-card>
+              <ion-thumbnail>
+                <img src="assets/img/plato.png">
+              </ion-thumbnail>
+              <div class="div_padding_top">
+                <h5>Nogada de pollo</h5>
+                <p class="descripcion_card">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy ...</p>
+                <div>
+                  <div class="div_precio">
+                    <p class="p_precio">S/. 30.00</p>
+                  </div>
+                  <div class="div_botonos">
+                    <ion-button class="btn_menos">-</ion-button>
+                    <p class="p_catidad">1</p>
+                    <ion-button class="btn_mas">+</ion-button>
+                  </div>
+                </div>
+                <ion-button class="btn_close ion-no-padding ion-no-margin"><ion-icon name="heart-outline"></ion-icon></ion-button>
+              </div>
+            </ion-card>
+          </ion-col>
+          <ion-col size="12" size-sm="6" size-lg="4" class="padding_start_end">
+            <ion-card>
+              <ion-thumbnail>
+                <img src="assets/img/plato1.png">
+              </ion-thumbnail>
+              <div class="div_padding_top">
+                <h5>Chicharron de trucha</h5>
+                <p class="descripcion_card">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy ...</p>
+                <div>
+                  <div class="div_precio">
+                    <p class="p_precio">S/. 30.00</p>
+                  </div>
+                  <div class="div_botonos">
+                    <ion-button class="btn_menos">-</ion-button>
+                    <p class="p_catidad">1</p>
+                    <ion-button class="btn_mas">+</ion-button>
+                  </div>
+                </div>
+                <ion-button class="btn_close ion-no-padding ion-no-margin"><ion-icon name="heart-outline"></ion-icon></ion-button>
+              </div>
+            </ion-card>
+          </ion-col>
+          <ion-col size="12" size-sm="6" size-lg="4" class="padding_start_end">
+            <ion-card>
+              <ion-thumbnail>
+                <img src="assets/img/plato2.png">
+              </ion-thumbnail>
+              <div class="div_padding_top">
+                <h5>Bisteck a la olla</h5>
+                <p class="descripcion_card">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy ...</p>
+                <div>
+                  <div class="div_precio">
+                    <p class="p_precio">S/. 30.00</p>
+                  </div>
+                  <div class="div_botonos">
+                    <ion-button class="btn_menos">-</ion-button>
+                    <p class="p_catidad">1</p>
+                    <ion-button class="btn_mas">+</ion-button>
+                  </div>
+                </div>
+              </div>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

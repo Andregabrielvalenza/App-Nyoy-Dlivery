@@ -1,0 +1,38 @@
+@font-face{
+    font-family: HelveticaNeueRegular;
+    src : url('/assets/font/HelveticaNeue-Regular.ttf')
+}
+ion-content
+{
+    --background: url('/assets/img/Imagen-12.png') 0 0/100% 100% no-repeat;
+}
+ion-img
+{
+    margin-top: 60px;
+}
+p
+{
+    color: #ffffff;
+    font-family: HelveticaNeueRegular;
+    font-size: 1.125rem;
+}
+@media (min-width: 640px) {
+    p
+    {
+        font-size: 1.25rem;
+    }
+    ion-img
+    {
+        margin-top: 50px;
+    }
+}
+@media (min-width: 768px) {
+    p
+    {
+        font-size: 2.125rem;
+    }
+    ion-img
+    {
+        margin-top: 100px;
+    }
+}

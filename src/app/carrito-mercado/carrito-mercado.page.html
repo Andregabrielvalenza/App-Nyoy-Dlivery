@@ -13,40 +13,72 @@
   <ion-grid>
     <ion-row class="ion-justify-content-center">
       <ion-col size="11" size-sm="8" size-md="5">
-        <ion-card class="ion-no-margin card_frutas">
+        <ion-item-sliding>
+      
+          <ion-item class="card_frutas" lines="none">
             <img src="assets/img/broccoli.png">
-          <p class="p_font">Brocoli</p>
-        </ion-card>
+            <p class="p_font">Brocoli</p>
+          </ion-item>
+      
+          <ion-item-options side="end">
+            <ion-item-option (click)="unread(item)" class="option_edit"><ion-icon name="create-outline"></ion-icon></ion-item-option>
+            <ion-item-option (click)="unread(item)" class="option_eliminar"><ion-icon name="trash-outline"></ion-icon></ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
       </ion-col>
       <ion-col size="11" size-sm="8" size-md="5">
-        <ion-card class="ion-no-margin card_frutas">
+        <ion-item-sliding>
+      
+          <ion-item class="card_frutas" lines="none">
             <img src="assets/img/kale.png">
-          <p class="p_font">Lechuga</p>
+            <p class="p_font">Lechuga</p>
           <div class="div_flex_precio">
             <p class="p_number_g">300g</p>
             <p class="p_soles">S/. 1.20</p>
           </div>
-        </ion-card>
+          </ion-item>
+      
+          <ion-item-options side="end">
+            <ion-item-option (click)="unread(item)" class="option_edit"><ion-icon name="create-outline"></ion-icon></ion-item-option>
+            <ion-item-option (click)="unread(item)" class="option_eliminar"><ion-icon name="trash-outline"></ion-icon></ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
       </ion-col>
       <ion-col size="11" size-sm="8" size-md="5">
-        <ion-card class="ion-no-margin card_frutas">
+        <ion-item-sliding>
+      
+          <ion-item class="card_frutas" lines="none">
             <img src="assets/img/pepper.png">
-          <p class="p_font">Pimentón rojo</p>
-          <div class="div_flex_precio">
-            <p class="p_number_g">5</p>
-            <p class="p_soles">S/. 11.13</p>
-          </div>
-        </ion-card>
+            <p class="p_font">Pimentón rojo</p>
+            <div class="div_flex_precio">
+              <p class="p_number_g">5</p>
+              <p class="p_soles">S/. 11.13</p>
+            </div>
+          </ion-item>
+      
+          <ion-item-options side="end">
+            <ion-item-option (click)="unread(item)" class="option_edit"><ion-icon name="create-outline"></ion-icon></ion-item-option>
+            <ion-item-option (click)="unread(item)" class="option_eliminar"><ion-icon name="trash-outline"></ion-icon></ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
       </ion-col>
       <ion-col size="11" size-sm="8" size-md="5">
-        <ion-card class="ion-no-margin card_frutas">
+        <ion-item-sliding>
+      
+          <ion-item class="card_frutas" lines="none">
             <img src="assets/img/strawberry.png">
-          <p class="p_font">Fresa</p>
-          <div class="div_flex_precio">
-            <p class="p_number_g">1 kg.</p>
-            <p class="p_soles">S/. 19.00</p>
-          </div>
-        </ion-card>
+            <p class="p_font">Fresa</p>
+            <div class="div_flex_precio">
+              <p class="p_number_g">1 kg.</p>
+              <p class="p_soles">S/. 19.00</p>
+            </div>
+          </ion-item>
+      
+          <ion-item-options side="end">
+            <ion-item-option (click)="unread(item)" class="option_edit"><ion-icon name="create-outline"></ion-icon></ion-item-option>
+            <ion-item-option (click)="unread(item)" class="option_eliminar"><ion-icon name="trash-outline"></ion-icon></ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
       </ion-col>
       <ion-col size="11" size-sm="8" size-md="7" class="ion_margin_top">
         <ion-row class="ion-justify-content-center">
